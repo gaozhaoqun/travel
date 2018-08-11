@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'  // 引入router文件夹下面的 index.js
-import fastClick from 'fastclick'
+import fastClick from 'fastclick' //传不到git?
 import './assets/styles/reset.css'
 
 Vue.config.productionTip = false
