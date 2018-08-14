@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'  // 引入router文件夹下面的 index.js
 import fastClick from 'fastclick' //传不到git?
 import '@/assets/styles/reset.css'
+import '@/assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)  //fastClick 自带的方法
