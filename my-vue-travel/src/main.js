@@ -7,7 +7,7 @@ import fastClick from 'fastclick' //传不到git?
 import './assets/styles/reset.css'
 
 Vue.config.productionTip = false
-fastClick.attach(document.body)
+fastClick.attach(document.body)  //fastClick 自带的方法
 
 /* eslint-disable no-new */
 new Vue({
