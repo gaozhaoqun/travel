@@ -18,7 +18,7 @@ export default {
     color: #fff
     .header-left
       width: .64rem
-      float: left 
+      float: left
     .header-input
       flex: 1
     .header-right
