@@ -28,7 +28,6 @@ export default {
                // {id: '002',imgUrl: 'https://source.qunarzz.com/site/images/wap/home/recommend/iphoneplus/dujia_shuqi_banner_20180710.jpg'}
                {id: '001',imgUrl: require('@/assets/img/rottweiler1.jpg')},  // 引用本地图片要用 require('图片路径')
                {id: '002',imgUrl: require('@/assets/img/rottweiler2.jpg')}
-
            ]
         }
     }
