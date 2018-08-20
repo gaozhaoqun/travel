@@ -43,13 +43,13 @@ export default {
      下面的 .wrapper 里的padding-bottom[假设图片宽750, 高度是184, 用高除以宽度的结果].)
         height 0
         overflow hidden
-        padding-bottom: 24.53%;
+           padding-bottom: 32.1%
     */
     .wrapper
         width 100%
         height 0
         // overflow hidden
-        padding-bottom: 24.53%
+        padding-bottom: 32.1%
         background #eee
         .swiper-img
             width 100%
