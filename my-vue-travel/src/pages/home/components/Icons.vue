@@ -62,13 +62,20 @@ export default {
     .icons {
         height: 0
         overflow: hidden
-        padding-bottom: 50%
+        padding-bottom: 50%     // 撑开高度 
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         .icon {
             position relative
             float left
             width: 25%
             height 0
-            padding-bottom: 25%
+            padding-bottom: 25%  // 撑开高度 
             .icon-img {
                 display block
                 position absolute
