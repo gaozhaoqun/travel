@@ -34,7 +34,7 @@ export default {
                {id: '010', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
                {id: '011', imgUrl: require('@/assets/img/icon1.jpg'), desc: '我是途牛'},
                {id: '012', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
-               {id: '012', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'}
+               {id: '013', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'}
            ]
         }
     },
