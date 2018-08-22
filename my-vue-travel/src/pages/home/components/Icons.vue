@@ -1,8 +1,8 @@
 <template>
     <div class='icons'>
         <swiper :options="swiperOption">
-            <swiper-slide  v-for="(page, index) of pages" :key="index">
-                <div class="icon" v-for="item of page" :key="item.id">
+            <swiper-slide  v-for="(page, index) of pages" :key="index">  <!-- 循环出几页 -->
+                <div class="icon" v-for="item of page" :key="item.id">  <!-- 循环出几个图标 -->
                     <div class="icon-img">
                         <img class="icon-img-content" :src="item.imgUrl" />
                         <p class="icon-desc"> {{ item.desc }} </p>
@@ -40,12 +40,13 @@ export default {
     },
     computed: {
         pages () {
-            const pages = []
+            // const只保证常量名指向的地址不变，并不能保证地址的数据不变
+            const pages = []  // pages是最外面的大数组 page是里面的数组
             this.iconList.forEach((item,index) => {
-                const page = Math.floor(index / 8)
+                const page = Math.floor(index / 8)  // 向下取整
                 if (!pages[page]) {
-                    pages[page] = []
-                }
+                    pages[page] = []  // 每页8个图标
+                } // item是iconList的每一项: {id: '001', imgUrl: require('...'), desc: '我是糯米'},
                 pages[page].push(item)
             })
             return pages
