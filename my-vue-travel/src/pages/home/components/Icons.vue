@@ -58,9 +58,10 @@ export default {
 <style lang="stylus" scoped>
     @import '~styles/varibles.styl'
     .icons >>> .swiper-container{
-        padding-bottom 25%
+        padding-bottom 1%
     }
     .icon {
+        margin-top .1rem
         position relative
         float left
         width: 25%
