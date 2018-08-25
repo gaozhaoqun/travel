@@ -47,11 +47,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
     .recommend-title 
-        margin-top .2rem
-        line-height .8rem
-        background #eee
-        text-indent .2rem
-        font-size .3rem
+        homeTitle()
     .item
         overflow hidden
         display flex
