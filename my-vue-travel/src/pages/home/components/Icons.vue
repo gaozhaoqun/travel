@@ -22,19 +22,21 @@ export default {
                loop: false  // 循环轮播
            },
            iconList: [
-               {id: '001', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
-               {id: '002', imgUrl: require('@/assets/img/icon1.jpg'), desc: '我是途牛'},
-               {id: '003', imgUrl: require('@/assets/img/icon1.jpg'), desc: '我是途牛'},
-               {id: '004', imgUrl: require('@/assets/img/icon1.jpg'), desc: '我是途牛'},
-               {id: '005', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
-               {id: '006', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
-               {id: '007', imgUrl: require('@/assets/img/icon1.jpg'), desc: '我是途牛'},
-               {id: '008', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
-               {id: '009', imgUrl: require('@/assets/img/icon1.jpg'), desc: '我是途牛'},
-               {id: '010', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
-               {id: '011', imgUrl: require('@/assets/img/icon1.jpg'), desc: '我是途牛'},
-               {id: '012', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'},
-               {id: '013', imgUrl: require('@/assets/img/icon2.jpg'), desc: '我是糯米'}
+               {id: '001', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '002', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
+               {id: '003', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
+               {id: '004', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
+               {id: '005', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '006', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '007', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
+               {id: '008', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '009', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
+               {id: '010', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '011', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
+               {id: '012', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '013', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '014', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
+               {id: '016', imgUrl: require('@/assets/img/icon1.png'), desc: '我是糯米'}
            ]
         }
     },
