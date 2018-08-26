@@ -16,35 +16,21 @@
 <script>
 export default {
     name: 'HomeIcons',
+    props: {
+        list: Array
+    },
     data () {
         return {
             swiperOption: {
                loop: false  // 循环轮播
-           },
-           iconList: [
-               {id: '001', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '002', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
-               {id: '003', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
-               {id: '004', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
-               {id: '005', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '006', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '007', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
-               {id: '008', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '009', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
-               {id: '010', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '011', imgUrl: require('@/assets/img/icon1.png'), desc: '我是途牛'},
-               {id: '012', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '013', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '014', imgUrl: require('@/assets/img/icon2.png'), desc: '我是糯米'},
-               {id: '016', imgUrl: require('@/assets/img/icon1.png'), desc: '我是糯米'}
-           ]
+           }
         }
     },
     computed: {
         pages () {
             // const只保证常量名指向的地址不变，并不能保证地址的数据不变
             const pages = []  // pages是最外面的大数组 page是里面的数组
-            this.iconList.forEach((item,index) => {
+            this.list.forEach((item,index) => {
                 const page = Math.floor(index / 8)  // 向下取整
                 if (!pages[page]) {
                     pages[page] = []  // 每页8个图标

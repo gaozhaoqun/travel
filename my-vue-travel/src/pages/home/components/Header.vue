@@ -4,12 +4,15 @@
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input "><span class="iconfont">&#xe632;&nbsp;</span>输入城市/景点游玩主题</div>
-    <div class="header-right arrow-icon">城市<span class="iconfont">&#xe6aa;</span></div>
+    <div class="header-right arrow-icon">{{ this.city}}<span class="iconfont">&#xe6aa;</span></div>
   </div>
 </template>
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  props: {  // 接收父组件传过来的值是city 类型是String, 然后在标签中直接使用 this.city
+    city: String
+  }
 };
 </script>
 <style scoped lang="stylus">

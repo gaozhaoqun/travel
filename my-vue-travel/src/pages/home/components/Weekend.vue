@@ -18,30 +18,33 @@
 <script>
 export default {
     name: 'HomeWeekend',
-     data () {
-        return {
-            weekendList: [
-                {
-                    id: '001', 
-                    imgUrl: require('@/assets/img/weekendImg.jpg'),
-                    title: '大连圣亚海洋世界',
-                    desc: '浪漫大连首站, 浪漫的海洋主题乐园'
-                },
-                {
-                    id: '002', 
-                    imgUrl: require('@/assets/img/weekendImg.jpg'),
-                    title: '大连圣亚海洋世界',
-                    desc: '浪漫大连首站, 浪漫的海洋主题乐园'
-                },
-                {
-                    id: '003', 
-                    imgUrl: require('@/assets/img/weekendImg.jpg'),
-                    title: '大连圣亚海洋世界',
-                    desc: '浪漫大连首站, 浪漫的海洋主题乐园'
-                },
-            ]
-        }
+    props: {
+        weekendList: Array
     }
+    //  data () {
+    //     return {
+    //         weekendList: [
+    //             {
+    //                 id: '001', 
+    //                 imgUrl: require('@/assets/img/weekendImg.jpg'),
+    //                 title: '大连圣亚海洋世界',
+    //                 desc: '浪漫大连首站, 浪漫的海洋主题乐园'
+    //             },
+    //             {
+    //                 id: '002', 
+    //                 imgUrl: require('@/assets/img/weekendImg.jpg'),
+    //                 title: '大连圣亚海洋世界',
+    //                 desc: '浪漫大连首站, 浪漫的海洋主题乐园'
+    //             },
+    //             {
+    //                 id: '003', 
+    //                 imgUrl: require('@/assets/img/weekendImg.jpg'),
+    //                 title: '大连圣亚海洋世界',
+    //                 desc: '浪漫大连首站, 浪漫的海洋主题乐园'
+    //             },
+    //         ]
+    //     }
+    // }
 }
 </script>
 
