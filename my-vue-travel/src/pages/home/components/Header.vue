@@ -4,7 +4,9 @@
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
     <div class="header-input "><span class="iconfont">&#xe632;&nbsp;</span>输入城市/景点游玩主题</div>
-    <div class="header-right arrow-icon">{{ this.city}}<span class="iconfont">&#xe6aa;</span></div>
+    <router-link to="/city">
+      <div class="header-right arrow-icon">{{ this.city}}<span class="iconfont">&#xe6aa;</span></div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -46,6 +48,7 @@ export default {
 
     .header-right 
       width: 1.24rem
+      color: #fff
       float: right
       text-align: center
       .arrow-icon
