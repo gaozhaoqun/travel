@@ -1,95 +1,97 @@
 <template>
     <div>
-        <div class="list">
-            <div class="area">
-                <div class="title border-topbottom">当前城市</div>
-                <div class="button-list">
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                </div>
-            </div>
-            <div class="area">
-                <div class="title border-topbottom">热门城市</div>
-                <div class="button-list">
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
-                    </div>
-                    <div class="button-wrapper">
-                        <div class="button">深圳</div>
+        <div class="list" ref="wrapper">  <!-- ref可以获取DOM 符合better-scroll结构 -->
+            <div>
+                <div class="area">
+                    <div class="title border-topbottom">当前城市 npm i better-scroll --save</div>
+                    <div class="button-list">
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="area">
-                <div class="title border-topbottom">A</div>
-                <div class="item-list">
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
+                <div class="area">
+                    <div class="title border-topbottom">热门城市</div>
+                    <div class="button-list">
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                        <div class="button-wrapper">
+                            <div class="button">深圳</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="area">
-                <div class="title border-topbottom">B</div>
-                <div class="item-list">
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
+                <div class="area">
+                    <div class="title border-topbottom">A</div>
+                    <div class="item-list">
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                    </div>
                 </div>
-            </div>
-            <div class="area">
-                <div class="title border-topbottom">C</div>
-                <div class="item-list">
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
-                    <div class="item border-bottom">阿拉善</div>
+                <div class="area">
+                    <div class="title border-topbottom">B</div>
+                    <div class="item-list">
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                    </div>
+                </div>
+                <div class="area">
+                    <div class="title border-topbottom">C</div>
+                    <div class="item-list">
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                        <div class="item border-bottom">阿拉善</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,8 +99,12 @@
 </template>
 
 <script>
+import Bscroll from 'better-scroll'  // 引入better-scroll插件
 export default {
-    name: 'CityList'
+    name: 'CityList',
+    mounted () {
+        this.scroll = new Bscroll(this.$refs.wrapper)
+    },
 }
 </script>
 
@@ -114,7 +120,7 @@ export default {
         left 0
         overflow hidden
         .title 
-            line-height: .44rem
+            line-height: .54rem
             font-size: .26rem
             background-color: #eee
             padding-left: .2rem
