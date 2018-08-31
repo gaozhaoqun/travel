@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="area" v-for="(value, key) of cities" :key="key">
+                <div class="area" v-for="(value, key) of cities" :key="key" :ref="key">
                     <div class="title border-topbottom"> {{ key }} </div>
                     <div class="item-list" v-for="i of value" :key="i.id">
                         <div class="item border-bottom">{{ i.name }}</div>
@@ -35,11 +35,22 @@ export default {
     name: 'CityList',
     props: {
         cities: Object,
-        hotCities: Array
+        hotCities: Array,
+        letter: String
     },
     mounted () {
         this.scroll = new Bscroll(this.$refs.wrapper)
     },
+    watch: {
+        letter () {  // 监听 letter数据的变化, 一旦发生改变, 函数内的代码就要被执行
+            // console.log(this.letter)
+            if(this.letter) {
+                console.log(this.$refs[this.letter][0])
+                const el = this.$refs[this.letter][0]
+                this.scroll.scrollToElement(el) // betterScroll插件一定要传入的是 DOM元素
+            }
+        }
+    }
 }
 </script>
 

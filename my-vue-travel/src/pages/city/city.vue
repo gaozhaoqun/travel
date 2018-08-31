@@ -2,8 +2,8 @@
     <div>
         <city-header></city-header>
         <city-search></city-search>
-        <city-list :cities="cities" :hotCities="hotCities"></city-list>
-        <city-alphabet :cities="cities"></city-alphabet>    
+        <city-list :letter="letter" :cities="cities" :hotCities="hotCities"></city-list>
+        <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>    
     </div>    
 </template>
 
@@ -24,7 +24,8 @@ export default {
     data () {
         return {
             cities: {},  // 定义数据用于接收 axios返回的数据
-            hotCities: [] // 定义数据用于接收 axios返回的数据
+            hotCities: [], // 定义数据用于接收 axios返回的数据
+            letter: ''
         }
     },
     mounted () {
@@ -41,6 +42,9 @@ export default {
                 this.cities = data.cities  // 数据赋值
                 this.hotCities = data.hotCities // 数据赋值
             }
+        },
+        handleLetterChange (letter) {
+            this.letter = letter
         }
     }
 }
