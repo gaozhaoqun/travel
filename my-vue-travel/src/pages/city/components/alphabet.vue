@@ -25,7 +25,7 @@ export default {
         letters () {
             const letters = []
             for (let i in this.cities) {
-                console.log(i) 
+                // console.log(i) 
                 letters.push(i)
             }
             return letters

@@ -45,9 +45,9 @@ export default {
         letter () {  // 监听letter数据的变化, 一旦发生改变, 函数内的代码就要被执行, alphabet组件传给父元素的数据, 再传给list子组件
             // console.log(this.letter)
             if(this.letter) {
-                console.log('this.letter是: ' + this.letter)
+                // console.log('this.letter是: ' + this.letter)
                 const el = this.$refs[this.letter][0]  // 获取:ref 里面的内容 第[0]项才是DOM元素
-                console.log(el)
+                // console.log(el)
                 this.scroll.scrollToElement(el) // betterScroll插件一定要传入的是 DOM元素
             }
         }
