@@ -5,7 +5,7 @@
     </div>
     <div class="header-input "><span class="iconfont">&#xe632;&nbsp;</span>输入城市/景点游玩主题</div>
     <router-link to="/city">
-      <div class="header-right arrow-icon">{{ this.city}}<span class="iconfont">&#xe6aa;</span></div>
+      <div class="header-right arrow-icon">{{ this.$store.state.city }}<span class="iconfont">&#xe6aa;</span></div>
     </router-link>
   </div>
 </template>
@@ -47,10 +47,11 @@ export default {
       text-indent .2rem
 
     .header-right 
-      width: 1.24rem
+      min-width: 1.24rem
       color: #fff
       float: right
       text-align: center
+      padding 0 .1rem
       .arrow-icon
         font-size .2rem
 </style>

@@ -6,21 +6,21 @@
                     <div class="title border-topbottom">当前城市 滚动插件: npm i better-scroll --save</div>
                     <div class="button-list">
                         <div class="button-wrapper">
-                            <div class="button">深圳</div>
+                            <div class="button">{{ this.$store.state.city }}</div>
                         </div>
                     </div>
                 </div>
                 <div class="area">
                     <div class="title border-topbottom">热门城市</div>
                     <div class="button-list">
-                        <div class="button-wrapper"  v-for="item of hotCities" :key="item.id">
+                        <div @click="handleCityClick(item.name)" class="button-wrapper"  v-for="item of hotCities" :key="item.id">
                            <div class="button">{{ item.name }}</div>
                         </div>
                     </div>
                 </div>
                 <div class="area" v-for="(value, key) of cities" :key="key" :ref="key">
                     <div class="title border-topbottom"> {{ key }} </div>
-                    <div class="item-list" v-for="i of value" :key="i.id">
+                    <div class="item-list" @click="handleCityClick(i.name)" v-for="i of value" :key="i.id">
                         <div class="item border-bottom">{{ i.name }}</div>
                     </div>
                 </div>
@@ -50,6 +50,12 @@ export default {
                 // console.log(el)
                 this.scroll.scrollToElement(el) // betterScroll插件一定要传入的是 DOM元素
             }
+        }
+    },
+    methods: {
+        handleCityClick (city) {
+            this.$store.dispatch('changeCity', city)
+            this.$router.push('/')
         }
     }
 }

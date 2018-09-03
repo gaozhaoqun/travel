@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'  		// 引入router文件夹下面的 index.js
 import fastClick from 'fastclick' 	//传不到git?
 import VueAwesomeSwiper from 'vue-awesome-swiper'  // 轮播插件
+import store from './store'     // 引入 vuex的配置js
 import 'styles/reset.css'    		// 修改了webpack配置: styles 就相当于src/assets/styles
 import 'styles/iconfont.css' 		// 修改webpack 一定要重启服务
 import 'swiper/dist/css/swiper.css' //轮播插件css
@@ -18,6 +19,7 @@ Vue.use(VueAwesomeSwiper, /* { default global options 使用swiper插件 这里�
 new Vue({
   el: '#app',
   router,  							// 路由就是根据网址的不同, 返回不同的内容给用户
+  store,                // 注册 vuex
   components: { App },
   template: '<App/>'
 })
