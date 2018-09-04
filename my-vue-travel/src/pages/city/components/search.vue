@@ -30,8 +30,8 @@ export default {
     },
     methods: {
         handleCityClick (city) {
-            this.$store.dispatch('changeCity', city)
-            this.$router.push('/')
+            this.$store.dispatch('changeCity', city) // 把数据通过dispatch方法传入到 store文件夹里index.js [actions]
+            this.$router.push('/') // 路由跳转到首页
         }
     },
     watch: {
