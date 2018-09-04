@@ -27,7 +27,7 @@ export default new Vuex.Store({
     2. src目录下新建文件夹 store / index.js
 
     3. 编辑 index.js
-        imporm Vue from 'vue'
+        import Vue from 'vue'
         import Vuex from 'vuex'
         Vue.use(Vuex)
         export default new Vuex.Store({
