@@ -33,6 +33,11 @@ export default new Vuex.Store({
         export default new Vuex.Store({
             state: {city: '深圳'}
         })
+        actions: {
+        changeCity (ctx, city) {
+            ctx.commit('actionsChangeCity', city)  // 组件的方法里监听changeCity事件: this.$store.dispatch('changeCity', city)
+        }
+    },
         mutations: {
             changeCity (state, city) {  // 参数是监听别的组件 传入进来的city
                 state.city = city  // 把从别的组件接收来的数据, 赋值给state.city
