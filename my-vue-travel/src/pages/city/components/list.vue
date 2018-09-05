@@ -6,7 +6,7 @@
                     <div class="title border-topbottom">当前城市 滚动插件: npm i better-scroll --save</div>
                     <div class="button-list">
                         <div class="button-wrapper">
-                            <div class="button">{{ this.$store.state.city }}</div>
+                            <div class="button">{{ this.currentCity }}</div>
                         </div>
                     </div>
                 </div>
@@ -31,6 +31,8 @@
 
 <script>
 import Bscroll from 'better-scroll'  // 引入better-scroll插件
+import { mapState, mapMutations } from 'vuex'  // 引入vuex的 mapState, 然后在computed 展开 ...
+                                // this.$store.state.city  可以直接简写 this.city
 export default {
     name: 'CityList',
     props: {
@@ -40,6 +42,11 @@ export default {
     },
     mounted () {
         this.scroll = new Bscroll(this.$refs.wrapper)
+    },
+    computed: {
+        ...mapState({
+            currentCity: 'city' // mapState是指: 把vuex里的数据 'city' 映射到 computed里的currentCity
+        }) 
     },
     watch: {
         letter () {  // 监听letter数据的变化, 一旦发生改变, 函数内的代码就要被执行, alphabet组件传给父元素的数据, 再传给list子组件
@@ -54,9 +61,11 @@ export default {
     },
     methods: {
         handleCityClick (city) {
-            this.$store.dispatch('changeCity', city)
+            // this.$store.commit('changeCity', city) // 引入了vuex的mapMutations, 这句可以写成 this.changeCity(city)
+            this.changeCity(city)
             this.$router.push('/')
-        }
+        },
+        ...mapMutations(['changeCity'])  // mutations里的changecity方法 映射到这个组件里 可直接使用
     }
 }
 </script>

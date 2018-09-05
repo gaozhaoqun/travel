@@ -1,23 +1,25 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import state from './state'
+import mutations from './mutations'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-    state: {
-        city: '深圳'  // 默认值是深圳
-    },
-    actions: {
-        changeCity (ctx, city) {
-            ctx.commit('actionsChangeCity', city)  // 组件的方法里监听changeCity事件: this.$store.dispatch('changeCity', city)
-        }
-    },
-    mutations: {
-        actionsChangeCity (state, city) {  // 接收actions里提交过来的数据, 并把state.city修改为接收到的值
-            state.city = city
+// let defaultCity = '上海'  // 设置默认城市
+// try {
+//     if (localStorage.city) { // 用到localStorage的时候一定要加 try catch
+//         defaultCity = localStorage.city
+//     }
+// } catch (e) {}
 
-        }
-    }
+export default new Vuex.Store({
+    state: state,   // 值是 上面import的state
+    // actions: {
+    //     changeCity (ctx, city) {
+    //         ctx.commit('changeCity', city)  // 组件的方法里监听changeCity事件: this.$store.dispatch('changeCity', city)
+    //     }
+    // },
+    mutations // import mutations from './mutations' 进来的
 })
 
 /*

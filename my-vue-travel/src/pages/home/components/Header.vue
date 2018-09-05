@@ -5,15 +5,19 @@
     </div>
     <div class="header-input "><span class="iconfont">&#xe632;&nbsp;</span>输入城市/景点游玩主题</div>
     <router-link to="/city">
-      <div class="header-right arrow-icon">{{ this.$store.state.city }}<span class="iconfont">&#xe6aa;</span></div>
+      <div class="header-right arrow-icon">{{ this.city }}<span class="iconfont">&#xe6aa;</span></div>
     </router-link>
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   name: "HomeHeader",
-  props: {  // 接收父组件传过来的值是city 类型是String, 然后在标签中直接使用 this.city
-    city: String
+  // props: {  // 接收父组件传过来的值是city 类型是String, 然后在标签中直接使用 this.city
+  //   city: String
+  // },
+  computed: {
+    ...mapState(['city'])  // mapState是指: 把vuex里的数据 'city' 映射到 computed里的city
   }
 };
 </script>
