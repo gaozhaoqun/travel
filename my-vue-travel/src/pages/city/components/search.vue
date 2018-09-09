@@ -30,14 +30,13 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['changeCity']),
         handleCityClick (city) {
             // this.$store.dispatch('changeCity', city) // 把数据通过dispatch方法传入到 store文件夹里index.js [actions].
             // this.$store.commit('changeCity', city)
             this.changeCity(city)
             this.$router.push('/') // 路由跳转到首页
-        }
-        
+        },
+        ...mapMutations(['changeCity'])
     },
     watch: {
         keyword () {

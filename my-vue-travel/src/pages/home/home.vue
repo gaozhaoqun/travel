@@ -60,8 +60,6 @@ export default {
   },
   activated () {  // 当页面重新被显示的时候执行该生命周期函数
     // console.log('activated')  // 选择城市页面返回到首页, 如果城市没边 是不需要发ajax请求的
-    console.log('last是: ' + this.lastCity)
-    console.log('city: ' + this.city)
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
       this.getHomeInfo()
