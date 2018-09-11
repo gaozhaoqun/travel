@@ -23,5 +23,8 @@ export default new Router({
       name: 'Detail',
       component: Detail
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {  // 解决路由进页面 不自动到顶部的问题
+    return { x: 0, y: 0 }  // x轴 : 0  y: 0
+  }
 })

@@ -29,7 +29,6 @@ export default {
     },
     methods: {
         handleScroll () {
-            // console.log(document.documentElement.scrollTop)
             const top = document.documentElement.scrollTop
             if ( top > 50) {
                 let opacity = top / 140   // 滚动条 在60 和 140 之间 做渐隐渐现的效果
@@ -37,9 +36,9 @@ export default {
                 this.opacityStyle = {
                     opacity
                 }
-                this.showAbs = false
-            } else {
                 this.showAbs = true
+            } else {
+                this.showAbs = false
             }
         }
     },
@@ -50,7 +49,7 @@ export default {
     deactivated () {
         // 由于activated 绑定的事件是在window上, 会导致在各个组件内都会执行该函数里面的方法,
         // 解决办法: 就是利用deactivated 解绑全局事件
-       window.removeEventListener('scroll', this.handleScroll)
+        window.removeEventListener('scroll', this.handleScroll)
     }
 }
 </script>
@@ -71,7 +70,7 @@ export default {
             color #fff
             font-size .38rem
     .header-fixed
-        z-index  22
+        z-index  2
         position fixed
         top 0
         left 0
