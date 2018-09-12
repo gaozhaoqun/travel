@@ -8,13 +8,15 @@
                 <div class="banner-number"><span class="iconfont banner-icon">&#xe64f;</span>39</div>
             </div>
         </div>
-
-        <common-gallery @closeSwiper="close" :imgs="gallaryImgs" v-show="showGallery"></common-gallery>
+        <fade-animation>
+            <common-gallery @closeSwiper="close" :imgs="gallaryImgs" v-show="showGallery"></common-gallery>
+        </fade-animation>
     </div>
 </template>
 
 <script>
 import commonGallery from 'common/gallary/Gallery'
+import FadeAnimation from 'common/fadeAnimation/fade'
 export default {
     name: 'DetailBanner',
     props: {
@@ -28,7 +30,8 @@ export default {
         }
     },
     components: {
-        commonGallery
+        commonGallery,
+        FadeAnimation
     },
     methods: {
         handleBannerClick () {
